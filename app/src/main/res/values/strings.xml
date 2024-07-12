@@ -47,6 +47,7 @@
     <string name="no_tasks_image_content_description">No tasks image</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tittlemast_be_6_char">tittlemast be  6 char</string>
 
 
 </resources>

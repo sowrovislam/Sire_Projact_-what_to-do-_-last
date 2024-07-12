@@ -1,6 +1,8 @@
 package com.example.final_projactsire1.addtask
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +13,9 @@ import androidx.lifecycle.AndroidViewModel
 
 import com.example.final_projactsire1.R
 import com.example.final_projactsire1.databinding.FragmentAddTaskBinding
+import com.example.final_projactsire1.utils.showChar
+import com.example.final_projactsire1.utils.showSnackbar
+import com.google.android.material.snackbar.Snackbar
 
 
 class AddTaskFragment : Fragment() {
@@ -32,8 +37,11 @@ class AddTaskFragment : Fragment() {
         binding.lifecycleOwner=this.viewLifecycleOwner
 
 
+        bindUiMessage()
 
 
+
+        addTask()
 
 
 
@@ -42,6 +50,29 @@ class AddTaskFragment : Fragment() {
 
 
 
+
+    }
+
+    private fun addTask() {
+
+
+
+    }
+    private fun bindUiMessage() {
+        binding.warningTextTaskTitle.showChar(lifecycleOwner = viewLifecycleOwner, viewModel.title)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        bindSnakbar(view)
+    }
+
+    private fun bindSnakbar(view: View) {
+        view.showSnackbar(
+            lifecycleOwner = viewLifecycleOwner,
+            viewModel.snakbarMsg,
+            Snackbar.LENGTH_LONG)
 
     }
 

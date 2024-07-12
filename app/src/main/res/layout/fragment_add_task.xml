@@ -26,7 +26,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+
             android:hint="@string/title_hint"/>
+        <TextView
+            android:id="@+id/warning_text_task_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="-16dp"
+            android:text="8 char"
+            android:textColor="#FF5722"
+            android:visibility="visible" />
+
+
 
         <EditText
             android:text="@={viewmodel.description}"
@@ -36,10 +48,20 @@
             android:layout_margin="16dp"
             android:hint="@string/title_hint"/>
 
+        <TextView
+            android:id="@+id/warning_text_taskDecription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="-16dp"
+            android:text="8 char"
+            android:textColor="#FF5722"
+            android:visibility="visible" />
+
 
       <androidx.appcompat.widget.AppCompatButton
           android:onClick="@{()->viewmodel.saveTask()}"
-          android:id="@+id/save_task"
+          android:id="@+id/save_taskBtn"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="@string/add_task"
